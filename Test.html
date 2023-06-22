@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Launcher</title>
+  <link rel="icon" type="image/x-icon" href="psx.png\">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000000, #003366);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .image-container {
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    .image-container img {
+      display: block;
+      margin-right: 10px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .roblox-button,
+    .secondary-button,
+    .top-button {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .roblox-button {
+      background: linear-gradient(to bottom, #003366, #000000);
+      margin-right: 10px;
+    }
+
+    .roblox-button:hover {
+      background: linear-gradient(to bottom, #000044, #000000);
+    }
+
+    .secondary-button {
+      background: linear-gradient(to bottom, #0293e7, #c0392b);
+    }
+
+    .secondary-button:hover {
+      background: linear-gradient(to bottom, #c0392b, #a5281b);
+    }
+
+    .top-button {
+      background: linear-gradient(to bottom, #2ecc71, #003366);
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .top-button:hover {
+      background: linear-gradient(to bottom, #27ae60, #000044);
+    }
+  </style>
+</head>
+<body>
+  <a href="https://www.whatismyip.com/" class="top-button">Roblox Profile</a>
+
+  <div class="image-container">
+    <a href="https://example.com">
+      <img src="psx.png" alt="Description of the image">
+    </a>
+    <a href="https://example.com">
+      <img src="v3.png" alt="Description of the image">
+    </a>
+  </div>
+
+  <div class="buttons-container">
+    <a href="https://www.roblox.com/games/6284583030/Pet-Simulator-X" class="roblox-button">Play PSX</a>
+    <a href="https://www.roblox.com/games/606849621/Jailbreak" class="secondary-button">Play Jailbreak</a>
+  </div>
+
+</body>
+</html>
