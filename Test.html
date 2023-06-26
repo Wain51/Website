@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Game Launcher</title>
-  <link rel="icon" type="image/x-icon" href="psx.png">
+  <link rel="icon" type="image/x-icon" href="Images/psx.png">
   <style>
     body {
       background: linear-gradient(to bottom, #000000, #003366);
@@ -75,6 +75,40 @@
     .top-button:hover {
       background: linear-gradient(to bottom, #27ae60, #000044);
     }
+
+    .copy-link-button {
+      background: linear-gradient(to bottom, #274dcc, #d35400);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .copy-link-button:hover {
+      background: linear-gradient(to bottom, #274dcc, #b34700);
+    }
+
+    .link-output {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      word-break: break-all;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      user-select: all;
+      cursor: pointer;
+    }
+
+    .copy-link-button-container {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -82,10 +116,10 @@
 
   <div class="image-container">
     <a href="https://example.com">
-      <img src="psx.png" alt="Description of the image">
+      <img src="Images/psx.png" alt="Description of the image">
     </a>
     <a href="https://example.com">
-      <img src="v3.png" alt="Description of the image">
+      <img src="Images/v3.png" alt="Description of the image">
     </a>
   </div>
 
@@ -93,6 +127,28 @@
     <a href="https://www.roblox.com/games/6284583030/Pet-Simulator-X" class="roblox-button">Play PSX</a>
     <a href="https://www.roblox.com/games/606849621/Jailbreak" class="secondary-button">Play Jailbreak</a>
   </div>
+  <h2 style="color:rgb(250, 250, 250)">Jailbreak Private Server :</h2>
 
+  <div class="link-output" id="copied-link" onclick="copyLink()">https://www.roblox.com/games/606849621?privateServerLinkCode=39981187060973618873115898542265</div>
+
+  <div class="copy-link-button-container">
+    <button class="copy-link-button" onclick="copyLink()">Copy Link</button>
+  </div>
+
+  <script>
+    function copyLink() {
+      var linkOutput = document.getElementById("copied-link");
+      var linkText = linkOutput.innerText;
+
+      var tempInput = document.createElement("input");
+      tempInput.value = linkText;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      alert("Link Copied ✅");
+    }
+  </script>
 </body>
 </html>
